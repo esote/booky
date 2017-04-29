@@ -65,7 +65,8 @@ def main():
                 book_pages = get_book_pages(soup)
                 book_title = format_title(get_book_title(soup))
                 book_rating = get_book_rating(soup)
-                print(book_title, book_pages, book_rating, sep = '\t')
+                if book_pages != 0:
+                    print(book_title, book_pages, book_rating, sep = '\t')
             except AttributeError:
                 continue
 
