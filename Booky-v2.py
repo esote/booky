@@ -8,12 +8,12 @@ URL = "https://www.goodreads.com/book/random"
 MIN_RATING_COUNT = 30
 
 
-def to_float(rating_count):
-    """ Return rating count as a float """
-    rating = rating_count.split()[0]
-    if ',' in rating:
-        return float(rating.replace(',', '.'))
-    return float(rating)
+def to_int(rating_count):
+    """ Return rating count as a int """
+    rating_count = rating_count.split()[0]
+    if ',' in rating_count:
+        return int(rating_count.replace(',', ''))
+    return int(rating_count)
 
 
 def format_title(book_title):
@@ -60,7 +60,7 @@ def main():
         soup = get_html_source()
         book_rating_count = get_book_rating_count(soup)
 
-        if to_float(book_rating_count) >= MIN_RATING_COUNT:
+        if to_int(book_rating_count) >= MIN_RATING_COUNT:
             try:
                 book_pages = get_book_pages(soup)
                 book_title = format_title(get_book_title(soup))
