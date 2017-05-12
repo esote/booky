@@ -7,7 +7,7 @@ import re
 URL = "https://www.goodreads.com/book/random"
 MIN_RATING_COUNT = 30
 
-FILE_PATH = "/home/ubuntuvm/R/Booky/data-ext.csv"
+FILE_PATH = "data.csv"
 
 
 def to_int(rating_count):
