@@ -3,7 +3,6 @@
 from bs4 import BeautifulSoup as bs
 import requests
 import re
-import traceback
 
 URL = "https://www.goodreads.com/book/random"
 MIN_RATING_COUNT = 30
@@ -60,7 +59,7 @@ def get_book_rating(soup):
 
 
 def main():
-    """ Gather book data until the program is mainually closed. """
+    """ Gather book data until the program is mainually closed or connection issue. """
 
     while True:
         soup = get_html_source()
