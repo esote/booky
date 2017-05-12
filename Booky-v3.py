@@ -6,7 +6,6 @@ import re
 
 URL = "https://www.goodreads.com/book/random"
 MIN_RATING_COUNT = 30
-
 FILE_PATH = "data.csv"
 
 
