@@ -3,6 +3,7 @@
 from bs4 import BeautifulSoup as bs
 import requests
 import re
+import traceback
 
 URL = "https://www.goodreads.com/book/random"
 MIN_RATING_COUNT = 30
@@ -17,7 +18,11 @@ def to_int(rating_count):
 
 
 def format_title(book_title):
-    """ Return formatted book title """
+    """ 
+        Return formatted book title:
+            "Actual Book Title! (Series identifier #3)" -> "Actual Book Title!"
+            "History of 4D Fish Slapping [Silly, Part 4]" -> "History of 4D Fish Slapping"
+    """
     book_title = ' '.join(book_title.split()).replace('&amp;', '&')
     book_title = re.sub(r'(\(|\[)(.*)(\)|\])','', book_title)
     return book_title
@@ -56,6 +61,7 @@ def get_book_rating(soup):
 
 def main():
     """ Gather book data until the program is mainually closed. """
+
     while True:
         soup = get_html_source()
         book_rating_count = get_book_rating_count(soup)
@@ -74,4 +80,10 @@ if __name__ == '__main__':
     try:
         main()
     except KeyboardInterrupt:
-        print("You've decided to close the program")
+        """ Manually close program """ 
+        # print("Exiting program...")
+        pass
+    except ConnectionResetError:
+        """ Connection error, most commonly caused by connection reset by peer """
+        # print("Connection reset by peer...")
+        pass
