@@ -48,7 +48,7 @@ def get_book_rating_count(soup):
 		book_rating_count = soup.find('span', attrs={'class', 'value-title'}).get_text()
 		return book_rating_count
 	except AttributeError:
-		""" Attribute error, the rating count is nonexistant """
+		""" Attribute error, the rating count is missing """
 		return -1
 
 
