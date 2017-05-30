@@ -31,3 +31,11 @@ optional arguments:
   -mr MIN_RATING, --min-rating MIN_RATING
                         specify the minimum accepted rating, default = 30
 ```
+
+### Example:
+```
+$python3 -OO Booky-v4.py -v3 -mr 100 /path/to/data.csv
+```
+```
+$python3 Booky-v4.py -verbosity 0 --min-rating 1 /path/to/other/data.csv
+```
