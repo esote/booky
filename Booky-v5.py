@@ -75,10 +75,8 @@ def get_book_rating(soup):
 
 def main():
 	# Command line parsing: verbosity, min rating, and required file path
-	parser = argparse.ArgumentParser(description="""Gather random book data from Goodreads and append it to a file in CSV format, \
-until the program is manually closed or until a connection issue.
-
-example command: Booky-v4.py -v3 -mr /path/to/file.csv""",
+	parser = argparse.ArgumentParser(description="Gather random book data from Goodreads and append it to a file in CSV format, \
+until the program is manually closed or until a connection issue. I recommend having the CSV header: Title,Pages,Rating.",
 		formatter_class=argparse.RawTextHelpFormatter)
 	parser.add_argument("-v", "--verbosity", type=int, choices=[0, 1, 2, 3],
 		help="""specify verbosity level, default = 2
