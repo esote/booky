@@ -1,5 +1,3 @@
-""" Thanks to Code Review user MrGrj! """
-
 from bs4 import BeautifulSoup as bs
 import requests
 import re
