@@ -2,6 +2,8 @@
 
 Python code to gather random book data by scraping Goodreads and prints it out in a copiable format (v1 and v2) or outputs it to a file in CSV format (v3 onward). Mainly for my own use, but I figured why not share it.
 
+### Example
+
 ```
 $ python3 -O Booky-v5.py -v3 --min-rating 500 /path/to/data.csv
 ```
