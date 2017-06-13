@@ -61,7 +61,7 @@ def get_book_rating(soup):
 
 
 def main():
-	""" Gather book data until the program is mainually closed or connection issue. """
+	""" Gather book data until the program is manually closed or connection issue. """
 
 	while True:
 		soup = get_html_source()
