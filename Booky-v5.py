@@ -11,7 +11,7 @@ URL = "https://www.goodreads.com/book/random"
 
 
 def to_int(rating_count):
-	# Return rating count as a int
+	# Return rating count as an int
 	if isinstance(rating_count, int):
 		return rating_count
 	else:
