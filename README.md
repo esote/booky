@@ -1,1 +1,1 @@
-Refer to https://esote.net/booky.html
+Refer to https://esote.net/booky/py.html
