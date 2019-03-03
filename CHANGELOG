@@ -1,0 +1,41 @@
+v5 (current):
+
+ - Added code to maintain session for URL
+ - Changed parser from html.parser to lxml
+ - Added SoupStrainer to parse more efficiently
+ - Changed single line comments to use '#' instead of docstrings
+ - Removed random endline spaces, added spaces where they should go
+ - Changed comma to colon for soup.find() in get_book_rating_count
+ - Updated command line parsing help print out
+
+v4:
+
+ - Added command line parsing
+ - In to_int(rating_count) added if-else statement to check if rating count is
+   already an integer
+ - Fixed issue caused by the removal of series identification where an extra
+   space is left at the end of the title
+ - Added option to continually print total line count after appendage (always
+   prints on the same line) if --verbosity is 1 or 3
+ - Added option to print program run time (in real time) and total line count of
+   lines added upon keyboard interrupt if --verbosity is 2 or 3
+ - Added FileNotFoundError to main try-except block to catch if file does not
+   exist
+ - Now actually prints something if ConnectionResetError is caught
+
+v3:
+
+ - Program now outputs to a file instead of printing
+ - Automatically creates data.csv in working directory
+ - Outputs with CSV formatting (double quotes around title, comma separation,
+   etc.)
+
+v2:
+
+ - Error catching (not all, but some)
+ - Now using BeautifulSoup instead of regex
+
+v1:
+
+ - Prints out data. Continues until it is manually closed or crashes because of
+   an error.
